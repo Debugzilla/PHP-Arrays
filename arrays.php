@@ -21,7 +21,33 @@ echo "Mostrar por pantalla el tamaño del array final = " . count($Array1);
 
 
 
+//exercici3
+//crea una funció que rebi com a parametres un array de paraules i un caracter.
+//La funcio ens retorna true si totes les paraules dl array tenen el caracter passat com a segon caracter.
 
+//Si tenim ["Hola", "Php", "Html"] retornara true si preguntem per "h" pero false si preguntem per "i".
+
+
+function buscarPalabra($array, $char) {
+    $Encontrado = false;
+
+    // Recorremos el array de palabras
+    foreach ($array as $palabra) {
+        // Recorremos cada palabra buscando el carácter
+        if (strpos(strtolower($palabra), strtolower($char)) !== false) {
+            $Encontrado = true;
+            break; 
+        }
+    }
+
+    return $Encontrado;
+}
+
+
+$array = ["Hola", "Php", "Html"];
+echo buscarPalabra($array, "i") ? 'True' : 'False'; // Devuelve True si es "h"
+
+   
 
 
 
