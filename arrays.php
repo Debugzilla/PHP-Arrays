@@ -51,8 +51,26 @@ echo buscarPalabra($array, "i") ? 'True' : 'False'; // Devuelve True si es "h"
 
 
 
+//exercici4
+//Fes un array asociatiu que representi informacio de tu mateix. En concret ha de incloure:
+//Nom
+//Edat
+//email
+//menjar favorit
 
+$ArrayAssociatiu = [
 
+    "Nom" => "Arnau",
+    "Edat" => 28,
+    "email" => "aerta7@gmail.com",
+    "menjar_favorit" => "Burger"
+
+];
+
+echo $ArrayAssociatiu["Nom"];
+echo $ArrayAssociatiu["Edat"];
+echo $ArrayAssociatiu["email"];
+echo $ArrayAssociatiu["menjar_favorit"];
 
 
 
