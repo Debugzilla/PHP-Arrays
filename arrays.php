@@ -5,7 +5,7 @@
 echo "<u>Exercici 1</u>" ."<br/>";
 $Array1 = [10, 23, 99, 7, 50];
 var_dump($Array1);
-
+echo "<br/><br/>";
 //Exercici2
 //mostrar per pantalla la mida de l'array anterior i posteriorment elimina un element de l'array anterior.
 //Després d'eliminar l'element, les claus senceres han de ser normalitzades ( reorganitzar els seus indexs).
@@ -18,7 +18,7 @@ echo "Eliminamos el índice 3 con array_splice, y reorganizamos los índices:<br
 print_r($Array1);
 // Mostrar el tamaño del array final
 echo "Mostrar por pantalla el tamaño del array final = " . count($Array1);
-
+echo "<br/><br/>";
 
 
 //exercici3
@@ -27,26 +27,26 @@ echo "Mostrar por pantalla el tamaño del array final = " . count($Array1);
 
 //Si tenim ["Hola", "Php", "Html"] retornara true si preguntem per "h" pero false si preguntem per "i".
 
+function Buscarpalabra($array,$letras){
 
-function buscarPalabra($array, $char) {
-    $Encontrado = false;
-
-    // Recorremos el array de palabras
-    foreach ($array as $palabra) {
-        // Recorremos cada palabra buscando el carácter
-        if (strpos(strtolower($palabra), strtolower($char)) !== false) {
-            $Encontrado = true;
-            break; 
-        }
+    
+    $aparece = substr_count($array,$letras);
+    
+    if($aparece == 0){
+        echo "false";
+    } else {
+        echo "true";
     }
-
-    return $Encontrado;
 }
 
 
-$array = ["Hola", "Php", "Html"];
-echo buscarPalabra($array, "i") ? 'True' : 'False'; // Devuelve True si es "h"
+echo "<br/><br/>";
 
+//$array = ["Hola", "Php", "Html"];
+echo buscarpalabra("Hola, Php, Html","l");
+
+echo "<br/><br/>";
+       
    
 
 
