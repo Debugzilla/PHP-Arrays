@@ -27,27 +27,43 @@ echo "<br/><br/>";
 
 //Si tenim ["Hola", "Php", "Html"] retornara true si preguntem per "h" pero false si preguntem per "i".
 
-function Buscarpalabra($array,$letras){
 
+function Buscarpalabra($array, $letras) {
+ 
+    $array = ["Hola", "Php", "Html"];
     
-    $aparece = substr_count($array,$letras);
-    
-    if($aparece == 0){
-        echo "false";
-    } else {
+
+    $palabras = [$array[0], $array[1], $array[2]];
+
+  
+    $encontrado = false;
+
+    foreach ($palabras as $palabra) {
+        for ($i = 0; $i < strlen($palabra); $i++) {
+            if ($palabra[$i] == "H" || $palabra[$i] == "h") {
+                if($letras == $palabra[$i]) {
+                    $encontrado = true;
+                    break 2;
+                }
+               
+            }
+        }
+    }
+
+ 
+    if ($encontrado) {
         echo "true";
+    } else {
+        echo "false";
     }
 }
+
 
 
 echo "<br/><br/>";
 
 //$array = ["Hola", "Php", "Html"];
-echo buscarpalabra("Hola, Php, Html","l");
-
-echo "<br/><br/>";
-       
-   
+echo buscarpalabra([],"h");
 
 
 
